@@ -56,16 +56,16 @@ const [count, setCount] = useState(0);
   setCount(count + 1)
   };
   const decrement = () => {
-   setCount(count -1)
+  setCount(count - 1)
   };
   const reset = () => {
-   setCount(count*0)
+  setCount(count*0)
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color:(count % 2 === 0) ? 'royalblue':'crimson' 
+    color:(count % 2 == 0) ? 'royalblue':'crimson' 
     
   };
 
@@ -73,7 +73,7 @@ const [count, setCount] = useState(0);
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        Number {count} is ${(count % 2 ===0) ? 'even':'odd'} {/* STEP 3 */}
+        Number {count} is {(count % 2 == 0) ? 'even':'odd'} {/* STEP 3 */}
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
